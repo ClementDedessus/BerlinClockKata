@@ -13,4 +13,13 @@ class berlinClockKata
         return $minute;
         
     }
+    public function fiveMinutes(int $number): string
+    {
+        $result = $number / 5;
+        $minute = '';
+        for ($i = 1; $i <= $result; $i++) {
+            $minute .= '1';
+        }
+        return $minute;
+    }
 }
