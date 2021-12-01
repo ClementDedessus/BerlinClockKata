@@ -11,5 +11,6 @@ class berlinClockKata
             $minute .= '1';
         }
         return $minute;
+        
     }
 }
