@@ -16,7 +16,7 @@ class berlinClockKataTest extends TestCase
     public function testFiveMinutes()
     {
         $minute = new berlinClockKata();
-        $actual = $minute->fiveMinutes(30);
-        $this->assertEquals("111111", $actual);
+        $actual = $minute->fiveMinutes(35);
+        $this->assertEquals("1111111", $actual);
     }
 }
