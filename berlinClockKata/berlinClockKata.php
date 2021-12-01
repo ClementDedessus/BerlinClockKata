@@ -22,4 +22,12 @@ class berlinClockKata
         }
         return $minute;
     }
+    public function hours(int $number): string
+    {
+        $hour = '';
+        for ($i = 1; $i <= $number; $i++) {
+            $hour .= '1';
+        }
+        return $hour;
+    }
 }
