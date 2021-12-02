@@ -30,4 +30,10 @@ class berlinClockKataTest extends TestCase
         $actual = $hour->fiveHours(20);
         $this->assertEquals("1111", $actual);
     }
+    public function testSeconds()
+    {
+        $second = new berlin_clock();
+        $actual = $second->seconds(20);
+        $this->assertEquals("1", $actual);
+    }
 }
