@@ -33,7 +33,7 @@ class berlinClockKataTest extends TestCase
     public function testSeconds()
     {
         $second = new berlinClockKata();
-        $actual = $second->seconds(59);
+        $actual = $second->seconds(3);
         $this->assertEquals("0", $actual);
     }
 }
