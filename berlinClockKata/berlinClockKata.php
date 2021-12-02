@@ -11,7 +11,6 @@ class berlinClockKata
             $minute .= '1';
         }
         return $minute;
-        
     }
     public function fiveMinutes(int $number): string
     {
@@ -26,6 +25,15 @@ class berlinClockKata
     {
         $hour = '';
         for ($i = 1; $i <= $number; $i++) {
+            $hour .= '1';
+        }
+        return $hour;
+    }
+    public function fiveHours(int $number): string
+    {
+        $result = $number / 5;
+        $hour = '';
+        for ($i = 1; $i <= $result; $i++) {
             $hour .= '1';
         }
         return $hour;
