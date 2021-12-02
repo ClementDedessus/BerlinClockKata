@@ -38,4 +38,12 @@ class berlinClockKata
         }
         return $hour;
     }
+    public function seconds(int $number): string
+    {
+        $sec = '0';
+        if ($number % 2 == 0) {
+            $sec = '1';
+        }
+        return $sec;
+    }
 }
