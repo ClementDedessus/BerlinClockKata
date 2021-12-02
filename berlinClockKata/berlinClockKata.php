@@ -46,4 +46,26 @@ class berlinClockKata
         }
         return $sec;
     }
+    public function boucle(int $number)
+    {
+        $allume = '';
+        for ($i = 1; $i <= $number; $i++) {
+            $allume .= '1';
+        }
+        return $allume;
+    }
+    public function heureEntiere(int $hours, $minute, $second): string
+    {
+        $nbHeureParCinq = $hours / 5;
+        $nbHeure = $hours - floor($nbHeureParCinq) * 5;
+        $nbMinuteParDeCinq = $minute / 5;
+        $nbMinute = $minute - floor($nbMinuteParDeCinq) * 5;
+        $nbLampeHourParCinq = $this->boucle($nbHeureParCinq);
+        $nbLampeHour = $this->boucle($nbHeure);
+        $nbLampeMinuteParCinq = $this->boucle($nbMinuteParDeCinq);
+        $nbLampeMinute = $this->boucle($nbMinute);
+        $nbLampeSecond = $this->seconds($second);
+        $horlogeEntier = $nbLampeHourParCinq . ' ' . $nbLampeHour . ' ' . $nbLampeMinuteParCinq . ' ' . $nbLampeMinute . ' ' . $nbLampeSecond;
+        return $horlogeEntier;
+    }
 }
